@@ -11,14 +11,15 @@ import {
 
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">
       <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
+        <div className="content">
+          <nav className="navigation">
+            <ul className="list">
+              <li >
                 <Link to="/">Home</Link>
               </li>
               <li>

@@ -20,15 +20,6 @@ function Room() {
           Уважаемые участники, во время Вашего хода Вы можете изменить параметры
           торгов, указанных в таблице:
         </h3>
-        {/*<div className={s.block}>
-          <p className={s.text}>ХОД</p>
-          <div className={s.timer}>
-            <span> 00:00:14 </span>
-            <span>
-              <GiSandsOfTime />
-            </span>
-          </div>
-        </div>*/}
         <div className={s.table}>
           <Parameters />
           {data.map((elem, index) => (

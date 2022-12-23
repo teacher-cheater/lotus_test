@@ -1,8 +1,10 @@
 import React from "react";
 import Member from "../Member/Member";
+import Parameters from "../Parameters/Parameters";
+
+import { GiSandsOfTime } from "react-icons/gi";
 import { data } from "../../data/data";
 import s from "./Room.module.css";
-import Parameters from "../Parameters/Parameters";
 
 function Room() {
   return (
@@ -21,7 +23,12 @@ function Room() {
         </h3>
         <div className={s.block}>
           <p className={s.text}>ХОД</p>
-          <div className={s.timer}> 00:00:14</div>
+          <div className={s.timer}>
+            <span> 00:00:14 </span>
+            <span>
+              <GiSandsOfTime />
+            </span>
+          </div>
         </div>
         <div className={s.table}>
           <Parameters />

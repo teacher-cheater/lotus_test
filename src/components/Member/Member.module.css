@@ -2,10 +2,17 @@
   text-align: center;
 }
 .item {
-  min-height: 16px;
+  min-height: 80px;
+  text-align: center;
+  color: rgb(89, 89, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid #c2bfbf;
 }
 .standart {
-  background-color: rgb(197, 196, 196);
+  background-color: #e2e2e2;
   padding: 5px 20px;
   min-height: 50px;
   display: flex;
@@ -17,7 +24,7 @@
   min-height: 16px;
 }
 .month {
-  background-color: rgb(197, 196, 196);
+  background-color: #e2e2e2;
   padding: 5px 20px;
   min-height: 16px;
 }
@@ -27,7 +34,7 @@
 }
 .payment {
   min-height: 70px;
-  background-color: rgb(197, 196, 196);
+  background-color: #e2e2e2;
   padding: 5px 20px;
   display: flex;
   flex-direction: column;

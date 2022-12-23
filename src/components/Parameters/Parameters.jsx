@@ -4,6 +4,9 @@ import s from "../Room/Room.module.css";
 function Parameters() {
   return (
     <div className={s.items}>
+      <div className={s.text}>
+        <p>ХОД</p>
+      </div>
       <div className={s.item}>Параметры и требования</div>
       <p className={s.standart}>
         Наличие комплекса мероприятий, повышающих стандарты качества

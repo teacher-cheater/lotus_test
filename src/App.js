@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import Room from "./components/Room/Room";
 import Home from "./components/Home/Home";
 
@@ -11,6 +13,8 @@ import {
 
 import './App.css';
 
+//const [timer, setTimer] = useState(120);
+//console.log(timer);
 
 function App() {
   return (

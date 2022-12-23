@@ -2,7 +2,6 @@ import React from "react";
 import Member from "../Member/Member";
 import Parameters from "../Parameters/Parameters";
 
-import { GiSandsOfTime } from "react-icons/gi";
 import { data } from "../../data/data";
 import s from "./Room.module.css";
 
@@ -21,7 +20,7 @@ function Room() {
           Уважаемые участники, во время Вашего хода Вы можете изменить параметры
           торгов, указанных в таблице:
         </h3>
-        <div className={s.block}>
+        {/*<div className={s.block}>
           <p className={s.text}>ХОД</p>
           <div className={s.timer}>
             <span> 00:00:14 </span>
@@ -29,7 +28,7 @@ function Room() {
               <GiSandsOfTime />
             </span>
           </div>
-        </div>
+        </div>*/}
         <div className={s.table}>
           <Parameters />
           {data.map((elem, index) => (

@@ -14,8 +14,10 @@
 .standart {
   background-color: rgb(197, 196, 196);
   padding: 5px 20px;
-
   min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .lots {
   padding: 5px 20px;
@@ -28,9 +30,12 @@
   padding: 5px 20px;
 }
 .payment {
-  min-height: 60px;
+  min-height: 70px;
   background-color: rgb(197, 196, 196);
   padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .actions {
   padding: 5px 20px;

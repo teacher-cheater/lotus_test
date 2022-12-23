@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { GiSandsOfTime } from "react-icons/gi";
 
+import { data } from "../../data/data.js";
+
 import s from "./Member.module.css";
 
 const getPadTime = (time) => time.toString().padStart(2, "0");
@@ -19,25 +21,56 @@ function Member({
   const [timeLeft, setTimeLeft] = useState(2 * 60);
   const minutes = getPadTime(Math.floor(timeLeft / 60));
   const seconds = getPadTime(timeLeft - minutes * 60);
-  //const [isCounting, setIsCouting] = useState(true);
+
+  //useEffect(() => {
+  //  let interval = setInterval(() => {
+  //    setTimeLeft((timeLeft) => (timeLeft >= 1 ? timeLeft - 1 : 0));
+  //  }, 1000);
+  //  return () => clearInterval(interval);
+  //}, [minutes, seconds]);
+
+  const [playerId, setPlayerId] = useState(0);
+
+  //const startTradeTime = new Date().setUTCHours(0, 0, 0, 0);
+  const startTimer = new Date().setUTCHours(0, 0, 0, 0);
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTimeLeft((timeLeft) => (timeLeft >= 1 ? timeLeft - 1 : 0));
-    }, 1000);
-  }, []);
-  console.log(timeLeft);
+    function timer() {
+      const currentTime = Date.now();
+      const diffTimes = Math.floor((currentTime - startTimer) / 1000);
+      const currentPlayer = Math.floor(diffTimes / 120) % data.length;
+      const currentTimerTime = diffTimes % 120;
+      setTimeLeft(currentTimerTime);
+
+      setPlayerId(currentPlayer);
+      //console.log(currentPlayer);
+    }
+    const interval = setInterval(timer, 1000);
+    return () => clearInterval(interval);
+  }, [startTimer, data]);
+
+  //const [startDate, setStartDate] = useState(null);
+  //const [endDate, setEndDate] = useState(null);
+  //const timeSpent = (endDate ?? Date.now()) - startDate;
+  //console.log(Math.floor(timeSpent / 60000).toLocaleString());
+  //console.log(startDate);
+  //console.log(endDate);
+  //console.log(timeSpent);
 
   return (
     <div>
       <div className={s.items}>
-        <div className={s.timer}>
-          <span>{minutes}</span>
-          <span> : </span>
-          <span>{seconds}</span>
-
-          <span>
-            <GiSandsOfTime />
-          </span>
+        <div className={s.empty}>
+          {playerId === id && (
+            <div className={s.timer}>
+              <span className={s.time}>
+                {minutes}:{seconds}
+              </span>
+              <span className={s.icon}>
+                <GiSandsOfTime />
+              </span>
+            </div>
+          )}
         </div>
         <div className={s.item}>
           {name} №{id}

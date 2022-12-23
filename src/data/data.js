@@ -8,7 +8,7 @@ export const data = [
     cost2: -25000,
     cost3: 2475000,
     actions: '-',
-    id: 1,
+    id: 0,
   },
   {
     activities: 'Участник',
@@ -19,7 +19,7 @@ export const data = [
     cost2: -25000,
     cost3: 2475000,
     actions: '-',
-    id: 2,
+    id: 1,
   },
   {
     activities: 'Участник',
@@ -30,7 +30,7 @@ export const data = [
     cost2: -25000,
     cost3: 2475000,
     actions: '-',
-    id: 3,
+    id: 2,
   },
   {
     activities: 'Участник',
@@ -41,6 +41,6 @@ export const data = [
     cost2: -25000,
     cost3: 2475000,
     actions: '-',
-    id: 4,
+    id: 3,
   },
 ]

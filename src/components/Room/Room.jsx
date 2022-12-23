@@ -1,7 +1,9 @@
 import React from "react";
 import Member from "../Member/Member";
-
+import { data } from "../../data/data";
 import s from "./Room.module.css";
+import Parameters from "../Parameters/Parameters";
+console.log(data.productionTime);
 
 function Room() {
   return (
@@ -19,26 +21,24 @@ function Room() {
           <div className={s.timer}> 00:00:14</div>
         </div>
         <div className={s.table}>
-          <div className={s.items}>
-            <div className={s.item}>Параметры и требования</div>
-            <p className={s.standart}>
-              Наличие комплекса мероприятий, повышающих стандарты качества
-              изготовления
-            </p>
-            <p className={s.lots}>Срок изготовления лота, дней</p>
-            <p className={s.month}>Гарантийные обязательства, мес</p>
-            <p className={s.pay}>Условия оплаты</p>
-            <p className={s.payment}>
-              Стоимость изготовления лота, руб. (без НДС)
-            </p>
-            <p className={s.actions}>Действия</p>
-          </div>
-
-          <Member></Member>
-          <Member></Member>
-          <Member></Member>
-          <Member></Member>
-          <Member></Member>
+          <Parameters></Parameters>
+          {data.map((elem, index) => (
+            <Member
+              key={index}
+              name={elem.activities}
+              time={elem.productionTime}
+              guarantee={elem.guarantee}
+              termsOfPayment={elem.termsOfPayment}
+              cost={elem.cost}
+              cost2={elem.cost2}
+              cost3={elem.cost3}
+              actions={elem.actions}
+            />
+          ))}
+          {/*<Member name={data.activities} time={data.productionTime}></Member>
+          <Member time={data.productionTime}></Member>
+          <Member time={data.productionTime}></Member>
+          <Member time={data.productionTime}></Member>*/}
         </div>
       </div>
     </div>

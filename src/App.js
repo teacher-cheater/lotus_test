@@ -20,10 +20,10 @@ function App() {
           <nav className="navigation">
             <ul className="list">
               <li >
-                <Link to="/">Home</Link>
+                <Link to="/"><span>Home</span></Link>
               </li>
               <li>
-                <Link to="/room">Room</Link>
+                <Link to="/room"><span>Room</span></Link>
               </li>
             </ul>
           </nav>

@@ -1,17 +1,17 @@
 export const data = [
   {
-    activities: '',
+    activities: 'Участник',
     productionTime: '80',
     guarantee: '24',
     termsOfPayment: 30,
     cost: 3700000,
     cost2: -25000,
     cost3: 2475000,
-    actions: '',
+    actions: '-',
     id: 1,
   },
   {
-    activities: '',
+    activities: 'Участник',
     productionTime: '90',
     guarantee: '24',
     termsOfPayment: 100,
@@ -22,7 +22,7 @@ export const data = [
     id: 2,
   },
   {
-    activities: '',
+    activities: 'Участник',
     productionTime: '75',
     guarantee: '22',
     termsOfPayment: 60,
@@ -33,7 +33,7 @@ export const data = [
     id: 3,
   },
   {
-    activities: '',
+    activities: 'Участник',
     productionTime: '120',
     guarantee: '36',
     termsOfPayment: 50,

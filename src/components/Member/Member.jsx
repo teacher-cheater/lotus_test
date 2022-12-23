@@ -1,8 +1,6 @@
 import React from "react";
-//import { data } from "../../data/data";
 
 import s from "./Member.module.css";
-//console.log(data.map((elem) => elem.informationAboutParticipants));
 function Member({
   name,
   time,
@@ -12,21 +10,23 @@ function Member({
   cost2,
   cost3,
   actions,
+  id,
 }) {
-  //console.log(time);
   return (
     <div>
       <div className={s.items}>
-        <div className={s.item}>{name}</div>
+        <div className={s.item}>
+          {name} №{id}
+        </div>
         <p className={s.standart}>{actions}</p>
         <p className={s.lots}>{time}</p>
         <p className={s.month}>{guarantee}</p>
-        <p className={s.pay}>{guarantee}%</p>
-        <p className={s.payment}>
-          <div className={s.colorFirst}>{cost} руб.</div>
-          <div className={s.colorSecond}> {cost2} руб.</div>
-          <div className={s.colorThird}>{cost3} руб. </div>
-        </p>
+        <p className={s.pay}>{termsOfPayment}%</p>
+        <div className={s.payment}>
+          <p className={s.colorFirst}>{cost} руб.</p>
+          <p className={s.colorSecond}> {cost2} руб.</p>
+          <p className={s.colorThird}>{cost3} руб. </p>
+        </div>
         <p className={s.actions}></p>
       </div>
     </div>

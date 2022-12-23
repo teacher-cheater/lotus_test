@@ -1,3 +1,31 @@
+.title {
+  color: red;
+  margin-bottom: 40px;
+  font-size: 24px;
+  /*border-bottom: 1px solid rgb(197, 196, 196);*/
+  position: relative;
+}
+.title span {
+  font-weight: 700;
+}
+.title::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: rgb(197, 196, 196);
+  position: absolute;
+  bottom: -20px;
+  left: 0%;
+  /*transform: translateX(50%);*/
+}
+.subtitle {
+  color: red;
+  background: rgb(197, 196, 196);
+  display: inline-block;
+  padding: 3px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
 .table {
   width: 1600px;
   display: grid;
@@ -10,7 +38,9 @@
 /*.table:first-child {
   text-align: left;
 }*/
-
+.item {
+  min-height: 16px;
+}
 .standart {
   background-color: rgb(197, 196, 196);
   padding: 5px 20px;
@@ -21,13 +51,16 @@
 }
 .lots {
   padding: 5px 20px;
+  min-height: 16px;
 }
 .month {
   background-color: rgb(197, 196, 196);
   padding: 5px 20px;
+  min-height: 16px;
 }
 .pay {
   padding: 5px 20px;
+  min-height: 16px;
 }
 .payment {
   min-height: 70px;
@@ -39,4 +72,5 @@
 }
 .actions {
   padding: 5px 20px;
+  min-height: 16px;
 }

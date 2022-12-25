@@ -8,7 +8,7 @@ function Home() {
     <div className={s.container}>
       <div className={s.content}>
         <h1 className={s.title}>ЛОТОС</h1>
-        <a target="_blank" href={"http://www.lotus1.org/"}>
+        <a target="_blank" href={"http://www.lotus1.org/"} rel="noreferrer">
           <img className={s.logo} src={logo} alt="logo" />
         </a>
       </div>

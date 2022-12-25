@@ -39,7 +39,7 @@ function Member({
 
     const interval = setInterval(timer, 1000);
     return () => clearInterval(interval);
-  }, [startTimer, data]);
+  }, [startTimer]);
 
   return (
     <div>

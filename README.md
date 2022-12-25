@@ -1,6 +1,6 @@
 # Онлайн комната для проведения торгов
 
-[Посмотреть онлайн]()
+[Посмотреть онлайн](https://stupendous-horse-c510c1.netlify.app)
 
 React, функциональные компоненты, useState, useEffect, flex, grid, routing. 
 

@@ -19,9 +19,11 @@ function Member({
   const getPadTime = (time) => time.toString().padStart(2, "0");
 
   const [timeLeft, setTimeLeft] = useState(2 * 60);
+  const [playerId, setPlayerId] = useState(0);
+
   const minutes = getPadTime(Math.floor(timeLeft / 60));
   const seconds = getPadTime(timeLeft - minutes * 60);
-  const [playerId, setPlayerId] = useState(0);
+
   const startTimer = new Date().setUTCHours(0, 0, 0, 0);
 
   useEffect(() => {
@@ -30,9 +32,11 @@ function Member({
       const diffTimes = Math.floor((currentTime - startTimer) / 1000);
       const currentPlayer = Math.floor(diffTimes / 120) % data.length;
       const currentTimerTime = diffTimes % 120;
+
       setTimeLeft(currentTimerTime);
       setPlayerId(currentPlayer);
     }
+
     const interval = setInterval(timer, 1000);
     return () => clearInterval(interval);
   }, [startTimer, data]);
@@ -64,7 +68,7 @@ function Member({
           <p className={s.colorSecond}> {cost2} руб.</p>
           <p className={s.colorThird}>{cost3} руб. </p>
         </div>
-        <p className={s.actions}></p>
+        <p className={s.actions} />
       </div>
     </div>
   );
